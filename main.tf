@@ -2,15 +2,14 @@
 data "template_file" "test" {
   template = "Hello, I am a template. My sample_var value = $${sample_var}"
 
-  vars {
-    sample_var = "${var.sample_var}"
-  }
 }
 
 resource "null_resource" "sleep" {
 
 
   provisioner "local-exec" {
-    command = "echo $aa \n sleep ${var.sleepy_time}"
+    command = "echo $aa"
+    timeout = 10
+
   }
 }
