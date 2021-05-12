@@ -8,7 +8,7 @@ resource "null_resource" "sleep" {
 
 
   provisioner "local-exec" {
-    command = "echo $aa"
+    command = "echo wpid= $IC_SCHEMATICS_WORKSPACE_ID"
     timeout = 10
 
   }
